@@ -5,8 +5,8 @@ MAINTAINER clarkzjw <clarkzjw@gmail.com>
 RUN \
   sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
   apt-get update && \
-  apt-get -y -qq upgrade && \
-  apt-get install -y -qq scrot git build-essential python3 python3-dev python3-pip python3-tk && \
+  apt-get -y upgrade && \
+  apt-get install -y scrot git build-essential python3 python3-dev python3-pip python3-tk && \
   rm -rf /var/lib/apt/lists/*
 
 RUN \
