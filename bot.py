@@ -1,33 +1,32 @@
-# from pyautogui import *
-import pyautogui
+import pyautogui as pg
 from time import sleep
 
 
 def move(_pos, _now):
     if _pos == 'left' and _now == 'left':
-        pyautogui.typewrite(['left'])
-        pyautogui.typewrite(['left'])
+        pg.typewrite(['left'])
+        pg.typewrite(['left'])
     elif _pos == 'left' and _now == 'right':
-        pyautogui.typewrite(['right'])
-        pyautogui.typewrite(['right'])
+        pg.typewrite(['right'])
+        pg.typewrite(['right'])
     elif _pos == 'right' and _now == 'right':
-        pyautogui.typewrite(['right'])
-        pyautogui.typewrite(['right'])
+        pg.typewrite(['right'])
+        pg.typewrite(['right'])
     elif _pos == 'right' and _now == 'left':
-        pyautogui.typewrite(['left'])
-        pyautogui.typewrite(['left'])
+        pg.typewrite(['left'])
+        pg.typewrite(['left'])
 
-width, height = pyautogui.size()
+width, height = pg.size()
 width *= 0.5
-pyautogui.moveTo(333, 600)
-pyautogui.click()
+pg.moveTo(333, 600)
+pg.click()
 
 posY = [360, 260, 160]
 posX = [276, 398]
 
 q = ['left', 'left', 'left']
 
-im = pyautogui.screenshot(region=(0, 0, width, height))
+im = pg.screenshot(region=(0, 0, width, height))
 l0 = im.getpixel((posX[0], posY[0]))
 l1 = im.getpixel((posX[0], posY[1]))
 l2 = im.getpixel((posX[0], posY[2]))
@@ -58,7 +57,7 @@ while True:
         move(pos, now)
         qlen = 0
     elif qlen == 0:
-        im = pyautogui.screenshot(region=(0, 0, width, height))
+        im = pg.screenshot(region=(0, 0, width, height))
         l0 = im.getpixel((posX[0], posY[0]))
         l1 = im.getpixel((posX[0], posY[1]))
         l2 = im.getpixel((posX[0], posY[2]))
