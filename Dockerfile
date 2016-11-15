@@ -27,6 +27,7 @@ RUN export uid=1000 gid=1000 && \
 RUN \
   Xvfb :1 -screen 0 1366x768x16 &> xvfb.log && \
   export DISPLAY=:1.0 && \
+  touch /root/.Xauthority && \
   touch /home/developer/.Xauthority && \
   pip3 install image && \
   pip3 install python3-xlib && \
