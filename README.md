@@ -1,4 +1,4 @@
-# LumberJack bot [![CircleCI](https://circleci.com/gh/clarkzjw/LumberJack.svg?style=svg)](https://circleci.com/gh/clarkzjw/LumberJack)
+# LumberJack bot [![CircleCI](https://circleci.com/gh/clarkzjw/LumberJack.svg?style=svg)](https://circleci.com/gh/clarkzjw/LumberJack) [![](https://images.microbadger.com/badges/version/clarkzjw/lumberjack.svg)](https://microbadger.com/images/clarkzjw/lumberjack "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/clarkzjw/lumberjack.svg)](https://microbadger.com/images/clarkzjw/lumberjack "Get your own image badge on microbadger.com")
 
 Current Top Score: 408
 
