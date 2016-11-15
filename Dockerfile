@@ -9,12 +9,14 @@ RUN \
   apt-get install -y xvfb scrot git build-essential python3 python3-dev python3-pip python3-tk && \
   rm -rf /var/lib/apt/lists/*
 
-RUN \
-  DISPLAY=:1.0 && \
-  export DISPLAY && \
-  Xvfb :1 -screen 0 1366x768x16 &> xvfb.log &&\
-  pip3 install image && \
-  pip3 install python3-xlib && \
-  pip3 install pyautogui
+RUN export uid=1000 gid=1000 && \
+    mkdir -p /home/developer && \
+    echo "developer:x:${uid}:${gid}:Developer,,,:/home/developer:/bin/bash" >> /etc/passwd && \
+    echo "developer:x:${uid}:" >> /etc/group && \
+    echo "developer ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/developer && \
+    chmod 0440 /etc/sudoers.d/developer && \
+    chown ${uid}:${gid} -R /home/developer
 
+USER developer
+ENV HOME /home/developer
 CMD /bin/bash
