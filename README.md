@@ -1,5 +1,9 @@
 # LumberJack bot [![CircleCI](https://circleci.com/gh/clarkzjw/LumberJack.svg?style=svg)](https://circleci.com/gh/clarkzjw/LumberJack)
 
+Current Top Score: 408
+
+![image](https://cloud.githubusercontent.com/assets/2663319/20305522/de7b327e-ab70-11e6-898e-3f286a0b567a.png)
+
 ## Usage
 
 ```python
