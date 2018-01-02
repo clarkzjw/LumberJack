@@ -2,9 +2,12 @@ import time
 
 import mss
 import pyautogui as pg
-from keyboard import send
 from numpy import array, uint8
 
+#from keyboard import send
+
+from pynput.keyboard import Key, Controller
+keyboard = Controller()
 
 def begin():
     pg.click(440, 900, 2)
@@ -36,7 +39,16 @@ with mss.mss() as sct:
         left = [img[x, posY[0]] for x in posX]
         for i in range(6):
             if is_tree(left[i]):
-                send("right, right", True, True)
+                keyboard.press(Key.right)
+                keyboard.release(Key.right)
+                time.sleep(0.014)
+                keyboard.press(Key.right)
+                keyboard.release(Key.right)
             else:
-                send("left, left", True, True)
-        time.sleep(0.145)
+                keyboard.press(Key.left)
+                keyboard.release(Key.left)
+                time.sleep(0.014)
+                keyboard.press(Key.left)
+                keyboard.release(Key.left)
+        time.sleep(0.17)
+
