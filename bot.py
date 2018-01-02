@@ -3,11 +3,10 @@ import time
 import mss
 import pyautogui as pg
 from numpy import array, uint8
-
-#from keyboard import send
-
 from pynput.keyboard import Key, Controller
+
 keyboard = Controller()
+
 
 def begin():
     pg.click(440, 900, 2)

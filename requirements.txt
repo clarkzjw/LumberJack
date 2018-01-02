@@ -1,6 +1,13 @@
 keyboard==0.11.0
 mss==3.1.1
 numpy==1.13.3
+Pillow==5.0.0
 PyAutoGUI==0.9.36
-pyobjc==4.1
+PyMsgBox==1.0.6
+pynput==1.3.8.1
 pyobjc-core==4.1
+pyobjc-framework-Cocoa==4.1
+pyobjc-framework-Quartz==4.1
+PyScreeze==0.1.13
+PyTweening==1.0.3
+six==1.11.0
