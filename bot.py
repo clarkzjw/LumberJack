@@ -2,7 +2,7 @@ import time
 
 import mss
 import pyautogui as pg
-from keyboard import press_and_release
+from keyboard import send
 from numpy import array, uint8
 
 
@@ -25,15 +25,6 @@ def is_tree(c1):
         return False
 
 
-def parse_screen(img, moves):
-    left = [img[x, posY[0]] for x in posX]
-    for i in range(6):
-        if is_tree(left[i]):
-            moves.append("right, right")
-        else:
-            moves.append("left, left")
-
-
 with mss.mss() as sct:
     screen = sct.monitors[1]
     screen["width"] = screen["width"] / 2.0
@@ -42,7 +33,10 @@ with mss.mss() as sct:
     while True:
         img = array(sct.grab(screen))
         moves = list()
-        parse_screen(img, moves)
-        for m in moves:
-            press_and_release(m)
+        left = [img[x, posY[0]] for x in posX]
+        for i in range(6):
+            if is_tree(left[i]):
+                send("right, right", True, True)
+            else:
+                send("left, left", True, True)
         time.sleep(0.145)
