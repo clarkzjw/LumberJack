@@ -11,3 +11,10 @@ python3 bot.py
 ```
 
 Tested on macOS 10.12.6 with screen resolution 1680*1050 (not HiDPI) on Safari.
+
+## Videos
+
+![60 fps](https://www.youtube.com/watch?v=TCPrj4mzZ6s)
+
+![240 fps slow motion](https://www.youtube.com/watch?v=uXTSveJCdH8)
+
